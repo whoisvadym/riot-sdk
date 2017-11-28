@@ -26,9 +26,9 @@
     "type": "git",
     "url": "git+https://github.com/pewstiepoll/riot-sdk.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["riot-sdk", "riot-api", "riot-gaming-api"],
+  "author": "Vadym Zelenin",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pewstiepoll/riot-sdk/issues"
   },

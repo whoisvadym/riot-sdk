@@ -1,2 +1,5 @@
 #ignore source files to reduce package size
 ./src/
+.babelrc
+.eslintrc.json
+rollup.config.js
