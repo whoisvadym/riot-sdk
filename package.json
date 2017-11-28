@@ -18,5 +18,20 @@
   },
   "dependencies": {
     "axios": "^0.17.1"
-  }
+  },
+  "name": "riot-sdk",
+  "version": "1.0.0",
+  "main": "./dist/riot.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pewstiepoll/riot-sdk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pewstiepoll/riot-sdk/issues"
+  },
+  "homepage": "https://github.com/pewstiepoll/riot-sdk#readme",
+  "description": "Simple yet powerful RIOT API SDK library"
 }
