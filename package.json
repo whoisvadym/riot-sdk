@@ -20,7 +20,7 @@
     "axios": "^0.17.1"
   },
   "name": "riot-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/riot.js",
   "repository": {
     "type": "git",
