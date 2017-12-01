@@ -10,8 +10,8 @@
   "scripts": {
     "test": "jest",
     "watch": "rollup -c -w",
-    "dev": "rollup -c --environment entry:",
-    "prod": "rollup -c --environment entry:dev"
+    "dev": "rollup -c",
+    "prod": "rollup -c --environment entry:prod"
   },
   "jest": {
     "transform": {}
@@ -20,7 +20,7 @@
     "axios": "^0.17.1"
   },
   "name": "riot-sdk",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "./dist/riot.js",
   "repository": {
     "type": "git",

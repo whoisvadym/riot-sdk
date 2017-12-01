@@ -35,7 +35,20 @@ const riot = require('riot-sdk')({
 
 ```
 
-## Basic usage
+## Simple usage
+
+```JS
+/**
+ * Recieve summoner account info by its ID
+ */
+
+//this will return a Promise
+riot.summoner.getById('SUMMONER-ID')
+    .then(summonerDTO => console.log(summonerDTO))
+    
+```
+
+## More examples
 ```JS
 /**
  * Show player lane statistic
@@ -97,14 +110,17 @@ const printTeams = (teams) => console.log('Team 1:', teams.team1, 'Team 2:', tea
 riot.summoner.getByName('SUMMONER-NAME')
     //Get matches by summoner id
     .then((Summoner) => riot.match.byAccountId(Summoner.accountId))
+    //Get last 100 matches and sort them by playing time
+    .then((MatchList) => MatchList.matches.sort((a, b) => a.timestamp > b.timestamp))
     //Get the latest match
-    .then((MatchList) => riot.match.byMatchId(MatchList.matches.slice(-1)[0].gameId))
+    .then((sortedMatches) => riot.match.byMatchId(sortedMatches.slice(-1)[0].gameId))
     //Sort summoners based on their teams
-    .then((Match) => sortSummoners(Match))
+    .then((latestMatch) => sortSummoners(latestMatch))
     //Print the structure of both teams to the console
-    .then((Match) => printTeams(Match))
+    .then((teams) => printTeams(teams))
     //Basic error handling
     .catch(error => console.log(error))
+
 ```
 
 ## Todo
